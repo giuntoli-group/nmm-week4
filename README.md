@@ -11,7 +11,9 @@ Let's use your first MD assignment to break the ice. Literally! In this assignme
 1a Setup and run the simulation in.tip3p_Water (TAKE AND TEST FROM HERE https://docs.lammps.org/Howto_tip3p.html). Varying temperature, determine 
 the crystallization and boiling temperature of the model. Structurally characterize the solid, liquid, and gas phases with snapshots and standard metrics such as density, degree of crystallinity, or radial distribution functions.
 
-1b
+1b Switch to the more complex tip4p model (IN PRINCIPLE HERE https://docs.lammps.org/Howto_tip4p.html, TO TEST. DECIDE HOW MUCH TO GIVE AND HOW MUCH ASK THEM TO FIND). of water and repeat the assignment described in 1a.
+
+1c 
 
 ## Assignment 2
 
