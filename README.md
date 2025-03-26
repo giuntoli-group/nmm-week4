@@ -12,7 +12,7 @@ Let's use your first MD assignment to break the ice. Literally! In this assignme
 
 1b. Switch to the more complex tip4p model (IN PRINCIPLE HERE https://docs.lammps.org/Howto_tip4p.html, TO TEST. DECIDE HOW MUCH TO GIVE AND HOW MUCH ASK THEM TO FIND). of water and repeat the assignment described in 1a.
 
-1c. (optional, hard!) The water phase diagram has a critical triple point, where solid, liquid, and gas phases coexist! Try to determine it by also varying the pressure of your simulation. (NICE IDEA BUT TO TEST, I HAVE NO IDEA IF IT CAN BE DONE!)
+1c. (optional, hard!) The water phase diagram has a critical triple point, where solid, liquid, and gas phases coexist! Try to determine it by also varying the pressure of your simulation. (NICE IDEA BUT TO BE TESTED, I HAVE NO IDEA IF IT CAN BE DONE!)
 
 ## Assignment 2
 
