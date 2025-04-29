@@ -8,41 +8,31 @@ Let's use your first MD assignment to break the ice. Literally! In this assignme
 
 ### Instructions
 
-1a. Setup and run the simulation in.tip3p_Water (TAKE AND TEST FROM HERE https://docs.lammps.org/Howto_tip3p.html). Varying temperature, determine the crystallization and boiling temperature of the model. Structurally characterize the solid, liquid, and gas phases with snapshots and standard metrics such as density, degree of crystallinity, or radial distribution functions.
+1a. start from ice 1h, tip3p model. Roughly find melting temperature. Compare to literature and explain experimental discrepancy.
 
-1b. Switch to the more complex tip4p model (IN PRINCIPLE HERE https://docs.lammps.org/Howto_tip4p.html, TO TEST. DECIDE HOW MUCH TO GIVE AND HOW MUCH ASK THEM TO FIND). of water and repeat the assignment described in 1a.
+1b. Switch to the more complex tip4p model. Roughly find melting temperature. Compare to literature and explain experimental discrepancy.
 
-1c. (optional, hard!) The water phase diagram has a critical triple point, where solid, liquid, and gas phases coexist! Try to determine it by also varying the pressure of your simulation. (NICE IDEA BUT TO BE TESTED, I HAVE NO IDEA IF IT CAN BE DONE!)
+1c. optional: find the boiling points of the two models, compare to literature.
 
 ## Assignment 2
 
-Back to graphene, now without perfect periodic lattice conditions! In the real world, graphene is not an infinite  2D plane and graphene sheets tend to form crumpled structures (LINK TO PAPER). Let's see how these structures affect the energy and mechanical stresses.
+Back to graphene, now much larger and without perfect periodic lattice conditions! In the real world, graphene is not an infinite 2D plane and graphene sheets tend to form crumpled structures (LINK TO PAPER). Let's see how these structures affect the energy and mechanical stresses of graphene flakes.
 
 ### Instructions
 
-2a. Run the simulation in.grapheneCrumpling (ADAPT SCRIPT FROM https://www.ericnhahn.com/tutorials/lammps-tutorials/crumpled-graphene). Make a movie of the process and track over time potential energy, radius of gyration, and ... (CHECK PAPERS FOR INTERESTING METRICS). Repeat the simulation to test how these properties are affected by the size of the graphene sheet.
+2a. Run the simulation grapheneSpere.in (CREDIT TO ERIC, ADAPTED FROM https://www.ericnhahn.com/tutorials/lammps-tutorials/crumpled-graphene). Questions on the script. Make a movie of the process. Make some snaphots coloring by stress, what can you see? Plot potential energy and Rg over time. 
 
-2b. Using the "region", "group", and "add force" commands, add an external force at two edges of your graphene sheets (EDGES MIGHT ALREADY BE DEFINED IN THE SCRIPT, MAYBE WE REMOVE THEM) so that the sheet gets pulled apart. Run the simulations with varying values of external forces. Calculate and report the potential energy of the system as a function of time, and separately the component due to bonded interactions. Visualize the process in Ovito coloring atoms by their stress/atom component.
-The simulation should fail if you run it long enough. Explain why it happens, and briefly outline how you would fix it.
+2b. Change the "fix indenter" line and try to make nanotube. No need to be perfect, but the closest structure to a perfect nanotube gets a non-grade-related prize.
 
-2c. (hard, optional) Fix it! Find a solution to complete the simulations of 2b without errors. (TEST OURSELVES/CHECK FOR REACTIVE FORCE FIELDS OR AT LEAST BOND BREAK)
+2c. Instead of an indenter, now use the fix deform command to perform a uniaxial deformation of graphene. Take care of the erate and remap options. What happens after a while? Discuss physically if it makes sense.
 
 ## Assignment 3
 
-Water transport (REPLICATE https://doi.org/10.1063/1.4996210) OR SURFACE ABSORPTION, WHATEVER WE MANAGE TO IMPLEMENT
+Transport and adsorption/absorption phenomena are of critical importance for nanomaterials, from batteries to functionalized surfaces. Let's play with them using what you are already familiar with: water and graphene! This assignment goes over the diffusion of water molecules in a graphene-bound nanochannel. Credits to Simon Gravelle for the original script.
 
 ### Instructions
 
-3a. 
+3a. Which force field? Is it appropriate? Differences with that of Assignment2? Run the simulation, get msd overall and divided by groups. Also water density and velocity profiles. Careful, big simulation. Use half a node (recommended), plan ahead.
 
-3b. 
 
-## Assignment 4
-
-Batteries: LET'S TRY TO IMPLEMENT THIS https://pubs.rsc.org/en/content/articlelanding/2021/cp/d0cp02851g
-
-### Instructions
-
-4a. 
-
-4b. 
+3b. Repeat for different forces pushing water.
