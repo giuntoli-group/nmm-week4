@@ -42,7 +42,8 @@ Assignment and scripts inspired by and adapted from [Eric N. Hahn's tutorial](ht
 
 2c. Instead of a "fix indenter", now use the "fix deform" command to perform uniaxial deformation of your graphene flake along the x (or y) axis. 
     Look at the LAMMPS documentation to implement it, and take care particularly of the "erate" and "remap" keywords. 
-    Run the simulation again. What happens after a while? Briefly discuss if it makes sense physically, both from an experimental point of view and within the framework of the model used.
+    Run the simulation again. What happens after a while? Briefly discuss if it makes sense physically, both from an experimental point of view and within the framework of the model used. 
+    Pro tip: per/atom stress is saved in the trajectory file, so you can use it to color particles based on stress.
 
 ## Assignment 3 - Go with the Flow
 
