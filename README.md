@@ -59,7 +59,8 @@ Transport and adsorption/absorption phenomena are of critical importance for nan
 
 (iii) which command enforces the flow of water in the channel?
 
-3b. Run the simulation. Note that it is quite large; it will not take too long (~10min) but plan the needed resources accordingly. Calculate a few properties from the trajectory: 
+3b. Run the simulation. Note that it is quite large; it will not take too long (~10min) but plan the needed resources accordingly. For Ovito visualization: make sure to use the "wrap at periodic boundaries" modification. 
+Calculate a few properties from the trajectory: 
 
 (i) the mean square displacement (MSD) of water molecules, both on average and also divided by layers along the z-axis. You can do that in Bead Spring Analytics by [ADD INSTRUCTIONS]. What is the physical origin of the difference across layers?
 
