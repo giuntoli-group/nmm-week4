@@ -40,11 +40,14 @@ Back to graphene, now much larger and without perfect periodic lattice condition
 
 ## Assignment 3 - Go with the Flow
 
-Transport and adsorption/absorption phenomena are of critical importance for nanomaterials, from batteries to functionalized surfaces. Let's play with them using what you are already familiar with: water and graphene! This assignment goes over the diffusion of water molecules in a graphene-bound nanochannel. Assignment adapted from [Simon Gravelle's original script](https://github.com/simongravelle/lammps-input-files/tree/main/inputs/water-in-graphene-slit)
+Transport and adsorption/absorption phenomena are of critical importance for nanomaterials, from batteries to functionalized surfaces. Let's play with them using what you are already familiar with: water and graphene! This assignment goes over the diffusion of water molecules in a graphene-bound nanochannel. Assignment adapted from [Simon Gravelle's original script](https://github.com/simongravelle/lammps-input-files/tree/main/inputs/water-in-graphene-slit).
 
 ### Instructions
 
-3a. Which force field? Is it appropriate? Differences with that of Assignment2? Run the simulation, get msd overall and divided by groups. Also water density and velocity profiles. Careful, big simulation. Use half a node (recommended), plan ahead.
+3a. Which force field? C-O epsilon value? Is it appropriate? Differences with that of Assignment2? 
+     Run the simulation, get msd overall and divided by groups. Also water density and velocity profiles. 
+     
+     Careful, big simulation. Use half a node (recommended), plan ahead.
 
 
-3b. Repeat for different forces pushing water.
+3b. Repeat for different forces pushing water. Make a plot of all average msd as function of pushing force, discuss. Compare velocity profiles, discuss.
