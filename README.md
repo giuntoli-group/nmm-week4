@@ -20,15 +20,27 @@ Back to graphene, now much larger and without perfect periodic lattice condition
 
 ### Instructions
 
-2a. Run the simulation crumplingSphere.in. Questions on the script. Make a movie of the process. Make some snaphots coloring by stress, what can you see? Plot potential energy and Rg over time. 
+2a. Check the simulation script crumplingSphere.in. Answer a few questions on the model implemented (you can also do this after running the simulation and visual inspection):
+(i) what force field is used?
+(ii) how many bonds are present in the graphene sheet created? Does it make sense?
+(iii) what is the key command line used to deform the graphene sheet?
 
-2b. Change the "fix indenter" line and try to make nanotube. No need to be perfect, but the closest structure to a perfect nanotube gets a non-grade-related prize.
+2b. Run the simulation and make a movie/a few snapshots of the process using Ovito for your report. Always start by visually inspecting your simulation! 
+(i) Color particles by potential energy. What do you notice? (careful, this is sensitive to the boundary values you select for the coloring scheme)
+(ii) Plot the potential energy and the radius of gyration of the system over time. Note that the first one is an output of the thermo command in the lammps output file, 
+     while for the second one you need BeadSpring Analytics or any other post-processing tool of your choice. 
 
-2c. Instead of an indenter, now use the fix deform command to perform a uniaxial deformation of graphene. Take care of the erate and remap options. What happens after a while? Discuss physically if it makes sense.
+2c. Now modify the "fix indenter" line and try to make a cylindrical nanotube out of your initial sheet. 
+    Report again your final structure and the variation in potential energy and radius of gyration. How does it compare to the previous simulation? 
+    NOTE: No need to create a perfect nanotube, which would be very challenging and requires additional tricks to set up. But the closest structure to a perfect nanotube reported by the weekly deadline gets a non-grade-related prize!
+
+2c. Instead of a "fix indenter", now use the "fix deform" command to perform uniaxial deformation of your graphene flake along the x (or y) axis. 
+    Look at the LAMMPS documentation to implement it, and take care particularly of the "erate" and "remap" keywords. 
+    Run the simulation again. What happens after a while? Discuss physically if it makes sense, both from an experimental point of view and within the framework of the model used.
 
 ## Assignment 3 - Go with the Flow
 
-Transport and adsorption/absorption phenomena are of critical importance for nanomaterials, from batteries to functionalized surfaces. Let's play with them using what you are already familiar with: water and graphene! This assignment goes over the diffusion of water molecules in a graphene-bound nanochannel. Credits to Simon Gravelle for the original script.
+Transport and adsorption/absorption phenomena are of critical importance for nanomaterials, from batteries to functionalized surfaces. Let's play with them using what you are already familiar with: water and graphene! This assignment goes over the diffusion of water molecules in a graphene-bound nanochannel. Assignment adapted from [Simon Gravelle's original script](https://github.com/simongravelle/lammps-input-files/tree/main/inputs/water-in-graphene-slit)
 
 ### Instructions
 
