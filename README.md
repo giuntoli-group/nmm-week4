@@ -36,14 +36,11 @@ Back to graphene, now much larger and without perfect periodic lattice condition
      while for the second one you need BeadSpring Analytics or any other post-processing tool of your choice. 
 
 2c. Now modify the "fix indenter" line and try to make a cylindrical nanotube out of your initial sheet. 
-    Report again your final structure and the variation in potential energy and radius of gyration. How does it compare to the previous simulation? 
-    
+    Report again your final structure and the variation in potential energy and radius of gyration. How does it compare to the previous simulation?     
     NOTE: No need to create a perfect nanotube, which would be very challenging and requires additional tricks to set up. But the closest structure to a perfect nanotube reported by the weekly deadline gets a non-grade-related prize!
 
 2c. Instead of a "fix indenter", now use the "fix deform" command to perform uniaxial deformation of your graphene flake along the x (or y) axis. 
-
     Look at the LAMMPS documentation to implement it, and take care particularly of the "erate" and "remap" keywords. 
-    
     Run the simulation again. What happens after a while? Discuss physically if it makes sense, both from an experimental point of view and within the framework of the model used.
 
 ## Assignment 3 - Go with the Flow
