@@ -46,7 +46,6 @@ Transport and adsorption/absorption phenomena are of critical importance for nan
 
 3a. Which force field? C-O epsilon value? Is it appropriate? Differences with that of Assignment2? 
      Run the simulation, get msd overall and divided by groups. Also water density and velocity profiles. 
-     
      Careful, big simulation. Use half a node (recommended), plan ahead.
 
 
