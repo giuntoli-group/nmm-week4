@@ -1,10 +1,10 @@
 # nmm-week4
 
-Welcome to Classical hell! From this week we forget about electrons and embrace the simpler times when particles were particles and waves were waves. In other words, Molecular Dynamics based on classical equations of motion. This allows our models to reach larger scales of atomistic processes. Week 4 in particular is dedicated to all-atom simulations, the critical importance of MD force fields, and atomistic processes of relevance for nanomaterials.
+Welcome to Classical hell! From this week we forget about electrons and embrace the simpler times when particles were particles and waves were waves. In other words, Molecular Dynamics (MD) based on classical equations of motion. This allows our models to reach larger scales of atomistic processes. We can also do crazy things like increasing temperature above 0K and pushing stuff! Week 4 in particular is dedicated to all-atom simulations, the critical importance of MD force fields, and atomistic processes of relevance for nanomaterials.
 
 ## Assignment 1 - The Icebreaker
 
-Let's use your first MD assignment to break the ice. Literally! In this assignment you will play with phase changes of water and how they depend on the chosen water model.
+Let's use your first MD assignment to break the ice. Literally! In this assignment you will play with phase changes of water and how they depend on the chosen water model and simulation setup.
 
 ### Instructions
 
@@ -16,7 +16,8 @@ Let's use your first MD assignment to break the ice. Literally! In this assignme
 
 ## Assignment 2 - Out of Flatland
 
-Back to graphene, now much larger and without perfect periodic lattice conditions! In the real world, graphene is not an infinite 2D plane and graphene sheets tend to form crumpled structures (LINK TO PAPER). Let's see how these structures affect the energy and mechanical stresses of graphene flakes. Assignment and scripts inspired by and adapted from [Eric N. Hahn's tutorial](https://www.ericnhahn.com/tutorials/lammps-tutorials/crumpled-graphene).
+Back to graphene, now much larger and without perfect periodic lattice conditions! In the real world, graphene is not an infinite 2D plane and [graphene sheets tend to form twisted or crumpled structures](https://doi.org/10.1016/j.mattod.2015.10.002). While relevant for electronic properties, let's simply see how these crumpling affects the energy and mechanical stresses of a graphene sheet. 
+Assignment and scripts inspired by and adapted from [Eric N. Hahn's tutorial](https://www.ericnhahn.com/tutorials/lammps-tutorials/crumpled-graphene).
 
 ### Instructions
 
@@ -24,15 +25,15 @@ Back to graphene, now much larger and without perfect periodic lattice condition
 
 (i) what force field is used?
 
-(ii) how many bonds are present in the graphene sheet created? Does it make sense?
+(ii) how many covalent bonds are present in the graphene sheet created? Does it make sense?
 
 (iii) what is the key command line used to deform the graphene sheet?
 
-2b. Run the simulation and make a movie/a few snapshots of the process using Ovito for your report. Always start by visually inspecting your simulation! 
+2b. Run the simulation (the CH.airebo-m file is also needed) and make a movie/a few snapshots of the process using Ovito for your report. Always start by visually inspecting your simulation! 
 
-(i) Color particles by potential energy. What do you notice? (careful, this is sensitive to the boundary values you select for the coloring scheme)
+(i) Color particles by potential energy. What do you notice? Careful: this is sensitive to the boundary values you select for the coloring scheme.
 
-(ii) Plot the potential energy and the radius of gyration of the system over time. Note that the first one is an output of the thermo command in the lammps output file, 
+(ii) Plot the potential energy and the radius of gyration of the system over time. Note that the first one is an output of the thermo command in the LAMMPS output file, 
      while for the second one you need BeadSpring Analytics or any other post-processing tool of your choice. 
 
 2c. Now modify the "fix indenter" line and try to make a cylindrical nanotube out of your initial sheet. 
@@ -41,7 +42,7 @@ Back to graphene, now much larger and without perfect periodic lattice condition
 
 2c. Instead of a "fix indenter", now use the "fix deform" command to perform uniaxial deformation of your graphene flake along the x (or y) axis. 
     Look at the LAMMPS documentation to implement it, and take care particularly of the "erate" and "remap" keywords. 
-    Run the simulation again. What happens after a while? Discuss physically if it makes sense, both from an experimental point of view and within the framework of the model used.
+    Run the simulation again. What happens after a while? Briefly discuss if it makes sense physically, both from an experimental point of view and within the framework of the model used.
 
 ## Assignment 3 - Go with the Flow
 
