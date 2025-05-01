@@ -2,7 +2,7 @@
 
 Welcome to Classical hell! From this week we forget about electrons and embrace the simpler times when particles were particles and waves were waves. In other words, Molecular Dynamics based on classical equations of motion. This allows our models to reach larger scales of atomistic processes. Week 4 in particular is dedicated to all-atom simulations, the critical importance of MD force fields, and atomistic processes of relevance for nanomaterials.
 
-## Assignment 1
+## Assignment 1 - The Icebreaker
 
 Let's use your first MD assignment to break the ice. Literally! In this assignment you will play with phase changes of water and how they depend on the chosen water model.
 
@@ -14,19 +14,19 @@ Let's use your first MD assignment to break the ice. Literally! In this assignme
 
 1c. optional: find the boiling points of the two models, compare to literature.
 
-## Assignment 2
+## Assignment 2 - Out of Flatland
 
-Back to graphene, now much larger and without perfect periodic lattice conditions! In the real world, graphene is not an infinite 2D plane and graphene sheets tend to form crumpled structures (LINK TO PAPER). Let's see how these structures affect the energy and mechanical stresses of graphene flakes.
+Back to graphene, now much larger and without perfect periodic lattice conditions! In the real world, graphene is not an infinite 2D plane and graphene sheets tend to form crumpled structures (LINK TO PAPER). Let's see how these structures affect the energy and mechanical stresses of graphene flakes. Assignment and scripts inspired by and adapted from [Eric N. Hahn's tutorial](https://www.ericnhahn.com/tutorials/lammps-tutorials/crumpled-graphene).
 
 ### Instructions
 
-2a. Run the simulation grapheneSpere.in (CREDIT TO ERIC, ADAPTED FROM https://www.ericnhahn.com/tutorials/lammps-tutorials/crumpled-graphene). Questions on the script. Make a movie of the process. Make some snaphots coloring by stress, what can you see? Plot potential energy and Rg over time. 
+2a. Run the simulation crumplingSphere.in. Questions on the script. Make a movie of the process. Make some snaphots coloring by stress, what can you see? Plot potential energy and Rg over time. 
 
 2b. Change the "fix indenter" line and try to make nanotube. No need to be perfect, but the closest structure to a perfect nanotube gets a non-grade-related prize.
 
 2c. Instead of an indenter, now use the fix deform command to perform a uniaxial deformation of graphene. Take care of the erate and remap options. What happens after a while? Discuss physically if it makes sense.
 
-## Assignment 3
+## Assignment 3 - Go with the Flow
 
 Transport and adsorption/absorption phenomena are of critical importance for nanomaterials, from batteries to functionalized surfaces. Let's play with them using what you are already familiar with: water and graphene! This assignment goes over the diffusion of water molecules in a graphene-bound nanochannel. Credits to Simon Gravelle for the original script.
 
