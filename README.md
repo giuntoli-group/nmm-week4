@@ -59,10 +59,10 @@ Transport and adsorption/absorption phenomena are of critical importance for nan
 
 (iii) which command enforces the flow of water in the channel?
 
-3b. Run the simulation and calculate a few properties from the trajectory: 
+3b. Run the simulation. Note that it is quite large; it will not take too long (~10min) but plan the needed resources accordingly. Calculate a few properties from the trajectory: 
 
 (i) the mean square displacement (MSD) of water molecules, both on average and also divided by layers along the z-axis. You can do that in Bead Spring Analytics by [ADD INSTRUCTIONS]. What is the physical origin of the difference across layers?
 
 (ii) the layer-by-layer distribution of water molecules density and velocity profile. How does the velocity profile compare to what is expected for [macroscopic laminar flow](http://hyperphysics.phy-astr.gsu.edu/hbase/pfric.html)? 
 
-3c (OPTIONAL). repeat 3b for different values of the force pushing water. Compare the average MSD and velocity profiles with varying force values and discuss your results.
+3c (OPTIONAL). Repeat 3b for different values of the force pushing water. Compare the average MSDs and the velocity profiles with varying force values and discuss your results.
