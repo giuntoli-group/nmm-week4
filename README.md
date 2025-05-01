@@ -47,13 +47,22 @@ Assignment and scripts inspired by and adapted from [Eric N. Hahn's tutorial](ht
 
 ## Assignment 3 - Go with the Flow
 
-Transport and adsorption/absorption phenomena are of critical importance for nanomaterials, from batteries to functionalized surfaces. Let's play with them using what you are already familiar with: water and graphene! This assignment goes over the diffusion of water molecules in a graphene-bound nanochannel. Assignment adapted from [Simon Gravelle's original script](https://github.com/simongravelle/lammps-input-files/tree/main/inputs/water-in-graphene-slit).
+Transport and adsorption/absorption phenomena are of critical importance for nanomaterials, from batteries to functionalized surfaces. Let's play with them using what you are already familiar with: water and graphene! This assignment goes over the diffusion of water molecules in a graphene-confined nanochannel. LAMMPS code adapted from [Simon Gravelle's original script](https://github.com/simongravelle/lammps-input-files/tree/main/inputs/water-in-graphene-slit).
 
 ### Instructions
 
-3a. Which force field? C-O epsilon value? Is it appropriate? Differences with that of Assignment2? 
-     Run the simulation, get msd overall and divided by groups. Also water density and velocity profiles. 
-     Careful, big simulation. Use half a node (recommended), plan ahead.
+3a. Look at the input files waterFlow.in, PARAM.lammps, and data.lammps and answer a few questions:
 
+(i) what force fields are used to simulate water and graphene? How do they  compare to the ones used in the first two assignments?
 
-3b. Repeat for different forces pushing water. Make a plot of all average msd as function of pushing force, discuss. Compare velocity profiles, discuss.
+(ii) what is the value of the interaction energy epsilon between oxygen and carbon atoms?
+
+(iii) which command enforces the flow of water in the channel?
+
+3b. Run the simulation and calculate a few properties from the trajectory: 
+
+(i) the mean square displacement (MSD) of water molecules, both on average and also divided by layers along the z-axis. You can do that in Bead Spring Analytics by [ADD INSTRUCTIONS]. What is the physical origin of the difference across layers?
+
+(ii) the layer-by-layer distribution of water molecules density and velocity profile. How does the velocity profile compare to what is expected for [macroscopic laminar flow](http://hyperphysics.phy-astr.gsu.edu/hbase/pfric.html)? 
+
+3c (OPTIONAL). repeat 3b for different values of the force pushing water. Compare the average MSD and velocity profiles with varying force values and discuss your results.
