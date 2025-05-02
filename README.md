@@ -16,7 +16,7 @@ Let's use your first MD assignment to break the ice. Literally! In this assignme
 
 ## Assignment 2 - Out of Flatland
 
-Back to graphene, now much larger and without perfect periodic lattice conditions! In the real world, graphene is not an infinite 2D plane and [graphene sheets tend to form twisted or crumpled structures](https://doi.org/10.1016/j.mattod.2015.10.002). While relevant for electronic properties, let's simply see how these crumpling affects the energy and mechanical stresses of a graphene sheet. 
+Back to graphene, now much larger and without perfect periodic lattice conditions! In the real world, graphene is not an infinite 2D plane and [graphene sheets tend to form twisted or crumpled structures](https://doi.org/10.1016/j.mattod.2015.10.002). While relevant for electronic properties, let's simply see how crumpling affects the energy and mechanical stresses of a graphene sheet. 
 Assignment and scripts inspired by and adapted from [Eric N. Hahn's tutorial](https://www.ericnhahn.com/tutorials/lammps-tutorials/crumpled-graphene).
 
 ### Instructions
