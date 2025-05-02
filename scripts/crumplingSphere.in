@@ -55,7 +55,6 @@ dump_modify mydump sort id
 run 1000
 
 write_data graphene_flat.data
-reset_timestep 0
 
 #-------------Run the simulation for confinement -----------------
 
