@@ -62,7 +62,7 @@ Transport and adsorption/absorption phenomena are of critical importance for nan
 3b. Run the simulation. Note that it is quite large; it will not take too long (~10min) but plan the needed resources accordingly. For Ovito visualization: make sure to use the "wrap at periodic boundaries" modification. 
 Calculate a few properties from the trajectory: 
 
-(i) the mean square displacement (MSD) of water molecules, both on average and also divided by layers along the z-axis. You can do that in Bead Spring Analytics by [ADD INSTRUCTIONS]. What is the physical origin of the difference across layers?
+(i) the mean square displacement (MSD) of water molecules, both on average and also divided by layers along the z-axis. You can do use the `bsa.compute_msd()` function in Bead Spring Analytics. Have a look at the [MDAnalysis documentation](https://userguide.mdanalysis.org/stable/selections.html) and use an appropriate atom selection criteria to select the particles based on their z-coordinate. Once you load the universe with `bsa.setup_universe()` you can loop over the trajectory and load the positions of the selected atoms only. Then simply pass that array to `compute_msd()` What is the physical origin of the difference across layers?
 
 (ii) the layer-by-layer distribution of water molecules density and velocity profile. How does the velocity profile compare to what is expected for [macroscopic laminar flow](http://hyperphysics.phy-astr.gsu.edu/hbase/pfric.html)? 
 
