@@ -55,19 +55,21 @@ Transport and adsorption/absorption phenomena are of critical importance for nan
 
 ### Instructions
 
-3a. Look at the input files waterFlow.in, PARAM.lammps, and channelData.lammps and answer a few questions:
+3a. Look at the input files waterFlow.in, PARAM.lammps, and channel.data and answer a few questions:
 
-(i) what force fields are used to simulate water and graphene? How do they  compare to the ones used in the first two assignments?
+(i) what force fields are used to simulate water and graphene? How do they compare to the ones used in the first two assignments?
 
 (ii) what is the value of the interaction energy epsilon between oxygen and carbon atoms?
 
 (iii) which command enforces the flow of water in the channel?
 
-3b. Run the simulation. Note that it is quite large; it will not take too long (~10min) but plan the needed resources accordingly. For Ovito visualization: make sure to use the "wrap at periodic boundaries" modification. 
+3b. Run the simulation. Note that it is quite large; it will not take too long (~10min) but plan the needed resources accordingly. 
 Calculate a few properties from the trajectory: 
 
-(i) the mean square displacement (MSD) of water molecules, both on average and also divided by layers along the z-axis. You can do use the `bsa.compute_msd()` function in Bead Spring Analytics. Have a look at the [MDAnalysis documentation](https://userguide.mdanalysis.org/stable/selections.html) and use an appropriate atom selection criteria to select the particles based on their z-coordinate. Once you load the universe with `bsa.setup_universe()` you can loop over the trajectory and load the positions of the selected atoms only. Then simply pass that array to `compute_msd()` What is the physical origin of the difference across layers?
+(i) the mean square displacement (MSD) of water molecules, both on average and also divided by layers along the z-axis. You can use the `bsa.compute_msd()` function in Bead Spring Analytics. Have a look at the [MDAnalysis documentation](https://userguide.mdanalysis.org/stable/selections.html) and use an appropriate atom selection criterion to select the particles based on their z-coordinate. Once you load the universe with `bsa.setup_universe()`, you can loop over the trajectory and load the positions of the selected atoms only. Then simply pass that array to `compute_msd()`.
 
-(ii) the layer-by-layer distribution of water molecules density and velocity profile. How does the velocity profile compare to what is expected for [macroscopic laminar flow](http://hyperphysics.phy-astr.gsu.edu/hbase/pfric.html)? 
+(ii) the layer-by-layer distribution of water molecules density and velocity profile. How does the velocity profile compare to what is expected for [macroscopic laminar flow](http://hyperphysics.phy-astr.gsu.edu/hbase/pfric.html)? What is the [reason](https://doi.org/10.1016/j.apsusc.2022.154477) for the discrepancy?
 
-3c (OPTIONAL). Repeat 3b for different values of the force pushing water. Compare the average MSDs and the velocity profiles with varying force values and discuss your results.
+(iii) fix the mixed non-bonded interactions as needed (no need to do a perfect calibration) so that the density and velocity profiles better represent [what is expected](https://doi.org/10.1063/1.4996210). 
+
+3c (OPTIONAL). With the correct non-bonded interactions, repeat 3b for different values of the force pushing water. Compare the density and velocity profiles with varying force values and discuss your results.
