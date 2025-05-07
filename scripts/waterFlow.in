@@ -15,7 +15,7 @@ kspace_style	pppm/tip4p 1.0e-4
 pair_modify	mix arithmetic tail yes
 special_bonds	lj/coul 0.0 0.0 0.5 angle yes
 
-read_data	channelData.lammps
+read_data	channel.data
 include 	PARAM.lammps       #file containing all force field parameters
 
 group		water type 1 2
