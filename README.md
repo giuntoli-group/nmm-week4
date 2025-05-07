@@ -2,6 +2,10 @@
 
 Welcome to Classical hell! From this week we forget about electrons and embrace the simpler times when particles were particles and waves were waves. In other words, Molecular Dynamics (MD) based on classical equations of motion. This allows our models to reach larger scales of atomistic processes. We can also do crazy things like increasing temperature above 0K and pushing stuff! Week 4 in particular is dedicated to all-atom simulations, the critical importance of MD force fields, and atomistic processes of relevance for nanomaterials.
 
+Ovito visualization tips: to preserve bonds while looking at dump files, load the data file first, then use the modification "load trajectory". If you save unwrapped coordinates (useful for calculating properties like the MSD), remember to add the modification "wrap at periodic boundaries". When coloring by particle properties, remember to adjust the range to get meaningful gradients.
+
+Post-processing tips: static properties can be measured from single frames, but time averages provide better sampling (as long as the system is equilibrated). Dynamics properties are functions of time, some of them (like the MSD) are better observed on a log scale. 
+
 ## Assignment 1 - The Icebreaker
 
 Let's use your first MD assignment to break the ice. Literally! In this assignment you will play with phase changes of water and how they depend on the chosen water model and simulation setup.
