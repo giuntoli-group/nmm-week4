@@ -55,7 +55,7 @@ Transport and adsorption/absorption phenomena are of critical importance for nan
 
 ### Instructions
 
-3a. Look at the input files waterFlow.in, PARAM.lammps, and data.lammps and answer a few questions:
+3a. Look at the input files waterFlow.in, PARAM.lammps, and channelData.lammps and answer a few questions:
 
 (i) what force fields are used to simulate water and graphene? How do they  compare to the ones used in the first two assignments?
 
