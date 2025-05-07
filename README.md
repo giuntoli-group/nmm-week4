@@ -70,6 +70,6 @@ Calculate a few properties from the trajectory:
 
 (ii) the layer-by-layer distribution of water molecules density and velocity profile. How does the velocity profile compare to what is expected for [macroscopic laminar flow](http://hyperphysics.phy-astr.gsu.edu/hbase/pfric.html)? What is the [reason](https://doi.org/10.1016/j.apsusc.2022.154477) for the discrepancy?
 
-(iii) fix the mixed non-bonded interactions as needed (no need to do a perfect calibration) so that the density and velocity profiles better represent [what is expected](https://doi.org/10.1063/1.4996210). 
+(iii) Fix the mixed non-bonded interactions as needed (no need to do a perfect calibration) so that a slower bound layer of water is present next to the graphene sheets. 
 
-3c (OPTIONAL). With the correct non-bonded interactions, repeat 3b for different values of the force pushing water. Compare the density and velocity profiles with varying force values and discuss your results.
+3c (OPTIONAL). With the new non-bonded interactions, repeat 3b for different values of the force pushing water. Compare the density and velocity profiles with varying force values and discuss your results.
