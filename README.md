@@ -12,11 +12,23 @@ Let's use your first MD assignment to break the ice. Literally! In this assignme
 
 ### Instructions
 
-1a. start from ice 1h, tip3p model. Roughly find melting temperature. Compare to literature and explain experimental discrepancy.
+1a. Visualize the data file ice3.data, containing a structure of Ih ice that uses the TIP3P model for water. The structure was generated using [GenIce](https://github.com/vitroid/GenIce). Calculate the [radial distribution function g(r)](https://en.wikipedia.org/wiki/Radial_distribution_function) of the structure with Ovito or Bead Spring Analytics and report which peaks correspond to which physical distances. 
 
-1b. Switch to the more complex tip4p model. Roughly find melting temperature. Compare to literature and explain experimental discrepancy.
+1b. Run the LAMMPS simulation water-TIP3P.in, which gradually raises the temperature of the system up to 1000K.
 
-1c. optional: find the boiling points of the two models, compare to literature.
+(i) Check the radial distribution function of the last simulation frame. How does it compare to that of the initial structure?
+
+(ii) Estimate the melting temperature of this simulation (HEADS UP: expect some pretty surprising results...). One rough way is to do it by visual inspection of the trajectory. For a better estimate, you can track the amount of O-H intermolecular bonds over time. O-H intermolecular bonds are the stabilizing hallmark of the Ih hexagonal ice structure, and we can consider the system melted once this quantity reaches a new equilibrium value. You can also look at how the peaks of the g(r) change with increasing temperature.
+
+To generate the plot of O-H intermolecular bonds over time in Ovito: 
+
+1c. Now switch to the more complex tip4p model, using the ice4.data starting file and the water-TIP4P.in input file. Run the simulation and repeat your estimate of the melting temperature.
+
+(i) How do the models compare in terms of efficiency (steps/s)?
+
+(ii) How do the melting temperatures of the two models compare to each other? And to the [experimental data](https://sciencenotes.org/melting-point-of-water-in-celsius-fahrenheit-and-kelvin/) and [modeling literature](https://pubs.aip.org/aip/jcp/article/122/11/114507/929655)?
+How do you explain these discrepancies?
+
 
 ## Assignment 2 - Out of Flatland
 
