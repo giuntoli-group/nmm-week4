@@ -44,7 +44,7 @@ Assignment and scripts inspired by and adapted from [Eric N. Hahn's tutorial](ht
     Report again your final structure and the variation in potential energy and radius of gyration. How does it compare to the previous simulation?     
     NOTE: No need to create a perfect nanotube, which would be very challenging and requires additional tricks to set up. But the closest structure to a perfect nanotube reported by the weekly deadline gets a non-grade-related prize!
 
-2c. Instead of a "fix indenter", now use the "fix deform" command to perform uniaxial deformation of your graphene sheet along the x (or y) axis. 
+2c. Instead of a "fix indenter", now use the "fix deform" command to perform uniaxial extension of your graphene sheet along the x (or y) axis. 
     Look at the LAMMPS documentation to implement it, and take care particularly of the "erate" and "remap" keywords. 
     Run the simulation again. What happens after a while? Briefly discuss if it makes sense physically, both from an experimental point of view and within the framework of the model used. 
     Pro tip: per/atom stress is saved in the trajectory file, so you can use it to color particles based on stress.
