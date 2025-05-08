@@ -29,7 +29,6 @@ To generate the plot of O-H intermolecular bonds over time in Ovito: Add the 'Cr
 (ii) How do the melting temperatures of the two models compare to each other? And to the [experimental data](https://sciencenotes.org/melting-point-of-water-in-celsius-fahrenheit-and-kelvin/) and [modeling literature](https://pubs.aip.org/aip/jcp/article/122/11/114507/929655)?
 How do you explain these discrepancies?
 
-
 ## Assignment 2 - Out of Flatland
 
 Back to graphene, now much larger and without perfect periodic lattice conditions! In the real world, graphene is not an infinite 2D plane and [graphene sheets tend to form twisted or crumpled structures](https://doi.org/10.1016/j.mattod.2015.10.002). While relevant for electronic properties, let's simply see how crumpling affects the energy and mechanical stresses of a graphene sheet. 
@@ -75,16 +74,14 @@ Transport and adsorption/absorption phenomena are of critical importance for nan
 
 (iii) which command enforces the flow of water in the channel?
 
-3b. Run the simulation. Note that it is quite large; it will not take too long (~10min) but plan the needed resources accordingly. 
-Calculate a few properties from the trajectory: 
-
+3b. Run the simulation. Calculate a few properties from the trajectory: 
 
 (i) the layer-by-layer distribution of water molecules' mass and velocity profiles along the z-axis. How does the velocity profile compare to what is expected for [macroscopic laminar flow](http://hyperphysics.phy-astr.gsu.edu/hbase/pfric.html)? What is the [reason](https://doi.org/10.1016/j.apsusc.2022.154477) for the discrepancy?
 
 * You can use `mass_profile.py` script as-is, if you have set up the `bsa` environment. However, if you are running the script on Habrok, you might enconuter the error: `QWidget: Cannot create a QWidget without QApplication`. In that case, modify the script to save the data to a file and generate the plot locally on your own machine.
 
-> **Hints for the velocity profile:** Have a look at the [MDAnalysis documentation](https://userguide.mdanalysis.org/stable/selections.html) and use an appropriate atom selection criterion to select the particles based on their z-coordinate. Once you load the universe with `bsa.setup_universe()`, you can loop over the trajectory and load the positions and velocities of the selected atoms only. Start by dividing the range from `zmin` to `zmax` into equal-width bins. For each frame in the trajectory, extract the positions and velocities of the atoms. Use the z-position of each atom to figure out which bin it belongs to. Then, compute the speed (magnitude of the velocity vector) for each atom and add it to the total for the corresponding bin. Also keep track of how many atoms fall into each bin.After processing all frames, compute the average speed in each bin by dividing the total speed by the number of atoms in that bin. Be careful to avoid dividing by zero. Finally, return the center position of each bin along with the average speeds and atom counts.
+> **Hints for the velocity profile:** Have a look at the [MDAnalysis documentation](https://userguide.mdanalysis.org/stable/selections.html) and use an appropriate atom selection criterion to select the particles based on their z-coordinate. Once you load the universe with `bsa.setup_universe()`, you can loop over the trajectory and load the positions and velocities of the selected atoms only. Start by dividing the range from `zmin` to `zmax` into equal-width bins. For each frame in the trajectory, extract the positions and velocities of the atoms. Use the z-position of each atom to figure out which bin it belongs to. Then, compute the speed (magnitude of the velocity vector) for each atom and add it to the total for the corresponding bin. Also keep track of how many atoms fall into each bin. After processing all frames, compute the average speed in each bin by dividing the total speed by the number of atoms in that bin. Be careful to avoid dividing by zero. Finally, return the center position of each bin along with the average speeds and atom counts.
 
-(ii) Fix the mixed non-bonded interactions as needed (no need to do a perfect calibration) so that a slower bound layer of water is present next to the graphene sheets. 
+(ii) To obtain Poiseuille flow, a bound layer of fluid is expected to be present near the tube walls. Where does this effect come from, and how would you address this in your simulation? 
 
-3c (OPTIONAL). With the new non-bonded interactions, repeat 3b for different values of the force pushing water. Compare the density and velocity profiles with varying force values and discuss your results.
+3c (OPTIONAL, HARD). Adapt the simulation to obtain the proper flow velocity profile expected for Poiseuille flow.
