@@ -20,7 +20,7 @@ Let's use your first MD assignment to break the ice. Literally! In this assignme
 
 (ii) Estimate the melting temperature of this simulation (HEADS UP: expect some pretty surprising results...). One rough way is to do it by visual inspection of the trajectory. For a better estimate, you can track the amount of O-H intermolecular bonds over time. O-H intermolecular bonds are the stabilizing hallmark of the Ih hexagonal ice structure, and we can consider the system melted once this quantity reaches a new equilibrium value. You can also look at how the peaks of the g(r) change with increasing temperature.
 
-To generate the plot of O-H intermolecular bonds over time in Ovito: 
+To generate the plot of O-H intermolecular bonds over time in Ovito: Add the 'Create Bonds' modifier and select the Pair-wise cutoff option. Change the O-H cutoff value to the average distance between O and H atoms (1.82). The number of bonds created in each frame is visible in the 'Global Attributes panel' at the bottom. Use the save icon to export the number of bonds and the timestep for every frame to one `.txt` file. Now you can use Python to read this file (`bonds = numpy.loadtxt('bonds.txt', skiprows=1)`) and plot the results.
 
 1c. Now switch to the more complex tip4p model, using the ice4.data starting file and the water-TIP4P.in input file. Run the simulation and repeat your estimate of the melting temperature.
 
